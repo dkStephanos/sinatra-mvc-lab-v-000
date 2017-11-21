@@ -20,7 +20,7 @@ class PigLatinizer
         @converted_text = text_to_convert.split("").rotate(3).join + "ay "
       end
     else
-      text_to_convert.each do |word|
+      text_to_convert.split(" ").each do |word|
         if(vowels.include?(word[0]))
           @converted_text += word + "way"
         elsif(vowels.include?(word[1]))
