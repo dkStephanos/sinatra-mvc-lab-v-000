@@ -8,7 +8,7 @@ class PigLatinizer
   end
 
   def piglatinize(text_to_convert)
-    vowels = "aeiou".split("")
+    vowels = "aeiouAEIOU".split("")
 
     if(text_to_convert.split(" ").count == 1)
       if(vowels.include?(text_to_convert[0]))
