@@ -1,3 +1,5 @@
+require 'pry'
+
 class PigLatinizer
 
   attr_accessor :text, :converted_text
@@ -22,6 +24,7 @@ class PigLatinizer
     else
       text_to_convert.split(" ").each do |word|
         if(vowels.include?(word[0]))
+          binding.pry
           @converted_text += word + "way"
         elsif(vowels.include?(word[1]))
           @converted_text += word.split("").rotate(1).join + "ay "
