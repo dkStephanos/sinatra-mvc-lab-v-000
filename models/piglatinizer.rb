@@ -9,8 +9,8 @@ class PigLatinizer
 
   def piglatinize(text_to_convert)
     vowels = "aeiou"
-    
-    if(text_to_convert.count == 1)
+
+    if(text_to_convert.split(" ").count == 1)
       if(vowels.contains(text_to_convert[0]))
         @converted_text = text_to_convert + "way"
       elsif(vowels.contains(word[1]))
