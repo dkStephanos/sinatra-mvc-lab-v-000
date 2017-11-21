@@ -13,6 +13,10 @@ class PigLatinizer
     if(@text.count == 1)
       if(vowels.contains(@text[0]))
         @converted_text = @text + "way"
+      elsif(vowels.contains(word[1]))
+        @converted_text = @text.split.rotate(1).join + "ay "
+      else
+        @converted_text = @text.split.rotate(2).join + "ay "
       end
     else
       @text.each do |word|
