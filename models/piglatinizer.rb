@@ -8,7 +8,7 @@ class PigLatinizer
   end
 
   def piglatinize(text_to_convert)
-    vowels = "aeiou"
+    vowels = "aeiou".split("")
 
     if(text_to_convert.split(" ").count == 1)
       if(vowels.contains(text_to_convert[0]))
@@ -20,7 +20,7 @@ class PigLatinizer
       end
     else
       text_to_convert.each do |word|
-        if(vowels.split.contains(word[0]))
+        if(vowels.contains(word[0]))
           @converted_text += word + "way"
         elsif(vowels.contains(word[1]))
           @converted_text += word.split.rotate(1).join + "ay "
