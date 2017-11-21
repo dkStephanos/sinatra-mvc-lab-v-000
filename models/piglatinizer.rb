@@ -2,14 +2,14 @@ class PigLatinizer
 
   attr_accessor :text, :converted_text
 
-  vowels = "aeiou"
-
   def to_pig_latin(some_text)
     @text = some_text.split(" ")
     piglatinize(@text)
   end
 
   def piglatinize(text_to_convert)
+    vowels = "aeiou"
+    
     if(text_to_convert.count == 1)
       if(vowels.contains(text_to_convert[0]))
         @converted_text = text_to_convert + "way"
