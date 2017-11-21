@@ -13,7 +13,7 @@ class PigLatinizer
     if(text_to_convert.split(" ").count == 1)
       if(vowels.include?(text_to_convert[0]))
         @converted_text = text_to_convert + "way"
-      elsif(vowels.include?(word[1]))
+      elsif(vowels.include?(text_to_convert[1]))
         @converted_text = text_to_convert.split.rotate(1).join + "ay "
       else
         @converted_text = text_to_convert.split.rotate(2).join + "ay "
