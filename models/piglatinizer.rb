@@ -3,7 +3,7 @@ class PigLatinizer
   attr_accessor :text, :converted_text
 
   def to_pig_latin(some_text)
-    piglatinize(@some_text)
+    piglatinize(some_text)
   end
 
   def piglatinize(text_to_convert)
