@@ -36,4 +36,3 @@ class PigLatinizer
     @converted_text.strip
   end
 end
- 
