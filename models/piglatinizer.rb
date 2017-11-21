@@ -10,16 +10,16 @@ class PigLatinizer
   end
 
   def piglatinize(text_to_convert)
-    if(@text.count == 1)
-      if(vowels.contains(@text[0]))
-        @converted_text = @text + "way"
+    if(text_to_convert.count == 1)
+      if(vowels.contains(text_to_convert[0]))
+        @converted_text = text_to_convert + "way"
       elsif(vowels.contains(word[1]))
-        @converted_text = @text.split.rotate(1).join + "ay "
+        @converted_text = text_to_convert.split.rotate(1).join + "ay "
       else
-        @converted_text = @text.split.rotate(2).join + "ay "
+        @converted_text = text_to_convert.split.rotate(2).join + "ay "
       end
     else
-      @text.each do |word|
+      text_to_convert.each do |word|
         if(vowels.contains(word[0]))
           @converted_text += word + "way"
         elsif(vowels.contains(word[1]))
